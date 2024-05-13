@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.12.4/xlsx.core.min.js"></script>
+<script src = "script.js"></script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<fieldset>
+	<legend>Система для выполнения функций:</legend>
+	<div>
+		<input type="checkbox" id="alarm" name="opt1" checked />
+		<label for="alarm">оповещения о пожаре</label>
+	</div>
+	<div>
+		<input type="checkbox" id="music" name="opt2"/>
+		<label for="music">трансляции музыки</label>
+	</div>
+	<div>
+		<input type="checkbox" id="signal" name="opt3"/>
+		<label for="signal">подачи сигналов/объявлений по расписанию</label>
+	</div>
+	</fieldset>
+	<fieldset>
+	<legend>Количество зон СОУЭ</legend>
+	<div>
+		<input type="text" id="zone" value="1" name="zone" size="12">
+		<label for="zone">( от 1 до 320)</label>
+	</div>
+	</fieldset>
+	<fieldset>
+	<legend>Суммарная мощность громкоговорителей в системе, Вт</legend>
+	<div>
+		<input type="text" id="power" value="200" name="power" size="12">
+		<label for="power">(от 200 до 102000 Вт)</label>
+	</div>
+	</fieldset>
+	<fieldset>
+	<legend>Исполнение</legend>
+	<div>
+		<input type="radio" id="stoika" name="isp" checked />
+		<label for="isp">стоечное</label>
+	</div>
+	<div>
+		<input type="radio" id="wall" name="isp"/>
+		<label for="isp">настенное</label>
+	</div>
+	</fieldset>
+	<fieldset>
+	<legend>Количество микрофонных вызывных станций </legend>
+	<div>
+		<input type="text" id="count" value="1" name="q" size="12">
+		<label for="q">(от 0 до 32)</label>
+	</div>
+	</fieldset>
+	<fieldset>
+	<legend>Системная коммутация по IP сети</legend>
+	<div>
+		<input type="radio" id="ipyes" name="ip" />
+		<label for="ip">да</label>
+	</div>
+	<div>
+		<input type="radio" id="ipno" name="ip" checked />
+		<label for="ip">нет</label>
+	</div>
+	</fieldset>
+	</br>
+	<div>
+	<input id="btn" type= "button" name="btn" class="btn" value="подбор оборудования">
+	</div>
+	</br>
+	</br>
+	<div id="data"><div id="grid"><div><strong>Система</strong></div><div><strong>Описание</strong></div><div><strong>О системе</strong></div></div></div>
+</body>
+</html>
